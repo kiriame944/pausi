@@ -5,11 +5,11 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Grupo de RadioButtons -->
     <RadioGroup
         android:id="@+id/rg_mascotas"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <RadioButton
             android:id="@+id/rb_perro"
@@ -24,17 +24,15 @@
             android:text="Gato" />
 
         <RadioButton
-            android:id="@+id/rb_conejo"
+            android:id="@+id/rb_ave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Conejo" />
+            android:text="Ave" />
     </RadioGroup>
 
-    <!-- Botón para seleccionar -->
     <Button
-        android:id="@+id/btn_seleccionar_mascota"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_ir_a_tips"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seleccionar Mascota"
-        android:layout_marginTop="16dp" />
+        android:text="Ver Consejos" />
 </LinearLayout>

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Pausi</string>
-    <string name="navigation_drawer_open">Abrir menú</string>
-    <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="drawer_open">Abrir Menú</string>
+    <string name="drawer_close">Cerrar Menú</string>
+    <string name="welcome_message">Bienvenido a Pausi</string>
+    <string name="select_pet_instruction">Selecciona una mascota para obtener consejos</string>
 </resources>
