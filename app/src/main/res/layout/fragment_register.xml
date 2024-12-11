@@ -1,14 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registro"
-        android:textSize="20sp" />
+    <!-- Nombre -->
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nombre"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Espaciado -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+    <!-- Correo -->
+    <EditText
+        android:id="@+id/et_correo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Correo"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Espaciado -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+    <!-- Contraseña -->
+    <EditText
+        android:id="@+id/et_contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Espaciado -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Botón de Registro -->
+    <Button
+        android:id="@+id/btn_registrar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Registrar"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:padding="10dp" />
 </LinearLayout>
