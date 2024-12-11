@@ -8,10 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
+    // Nombre de la base de datos y versión
     private static final String DATABASE_NAME = "pausi.db";
     private static final int DATABASE_VERSION = 1;
 
-    // Tabla de usuarios
+    // Nombre de la tabla y columnas
     private static final String TABLE_USERS = "usuarios";
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_NAME = "nombre";
@@ -24,21 +25,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        // Crear la tabla de usuarios
         String createTableUsers = "CREATE TABLE " + TABLE_USERS + " (" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMN_NAME + " TEXT, " +
-                COLUMN_EMAIL + " TEXT UNIQUE, " +
-                COLUMN_PASSWORD + " TEXT)";
+                COLUMN_NAME + " TEXT NOT NULL, " +
+                COLUMN_EMAIL + " TEXT NOT NULL UNIQUE, " +
+                COLUMN_PASSWORD + " TEXT NOT NULL)";
         db.execSQL(createTableUsers);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // Eliminar la tabla si ya existe y volver a crearla
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         onCreate(db);
     }
 
-    // Métodos CRUD
+    // Registrar un usuario
     public boolean registrarUsuario(String nombre, String correo, String contraseña) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -47,9 +50,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_PASSWORD, contraseña);
 
         long result = db.insert(TABLE_USERS, null, values);
-        return result != -1; // Retorna true si se insertó correctamente
+        return result != -1; // Devuelve true si la inserción fue exitosa
     }
 
+    // Verificar usuario para inicio de sesión
     public boolean verificarUsuario(String correo, String contraseña) {
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM " + TABLE_USERS + " WHERE " +
@@ -58,5 +62,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         boolean existe = cursor.getCount() > 0;
         cursor.close();
         return existe;
+    }
+
+    // Obtener datos de un usuario
+    public Cursor obtenerUsuario(String correo) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_EMAIL + " = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{correo});
+        return cursor;
+    }
+
+    // Actualizar datos de usuario
+    public boolean actualizarUsuario(String correoActual, String nuevoNombre, String nuevoCorreo, String nuevaContraseña) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME, nuevoNombre);
+        values.put(COLUMN_EMAIL, nuevoCorreo);
+        values.put(COLUMN_PASSWORD, nuevaContraseña);
+
+        int filasAfectadas = db.update(TABLE_USERS, values, COLUMN_EMAIL + " = ?", new String[]{correoActual});
+        return filasAfectadas > 0; // Devuelve true si al menos una fila fue afectada
+    }
+
+    // Eliminar usuario
+    public boolean eliminarUsuario(String correo) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int filasEliminadas = db.delete(TABLE_USERS, COLUMN_EMAIL + " = ?", new String[]{correo});
+        return filasEliminadas > 0; // Devuelve true si al menos una fila fue eliminada
+    }
+
+    // Obtener todos los usuarios (opcional, útil para debugging o funcionalidades futuras)
+    public Cursor obtenerTodosLosUsuarios() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_USERS;
+        return db.rawQuery(query, null);
     }
 }

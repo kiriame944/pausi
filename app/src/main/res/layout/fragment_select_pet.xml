@@ -1,14 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Grupo de RadioButtons -->
+    <RadioGroup
+        android:id="@+id/rg_mascotas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_perro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perro" />
+
+        <RadioButton
+            android:id="@+id/rb_gato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gato" />
+
+        <RadioButton
+            android:id="@+id/rb_conejo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conejo" />
+    </RadioGroup>
+
+    <!-- Botón para seleccionar -->
+    <Button
+        android:id="@+id/btn_seleccionar_mascota"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Selecciona tu Mascota"
-        android:textSize="20sp" />
+        android:text="Seleccionar Mascota"
+        android:layout_marginTop="16dp" />
 </LinearLayout>
