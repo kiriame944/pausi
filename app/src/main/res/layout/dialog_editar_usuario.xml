@@ -1,41 +1,81 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/dosfpawsy"
     android:padding="16dp">
 
-    <!-- Campo para el nuevo nombre -->
-    <EditText
-        android:id="@+id/et_nuevo_nombre"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nuevo Nombre"
-        android:inputType="textPersonName" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <!-- Espaciado entre campos -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="8dp" />
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestión de Usuarios"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
 
-    <!-- Campo para el nuevo correo -->
-    <EditText
-        android:id="@+id/et_nuevo_correo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nuevo Correo"
-        android:inputType="textEmailAddress" />
+        <!-- Campo para el nuevo nombre -->
+        <EditText
+            android:id="@+id/et_nuevo_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nuevo Nombre"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp"
+            android:inputType="textPersonName" />
 
-    <!-- Espaciado entre campos -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="8dp" />
+        <!-- Campo para el nuevo correo -->
+        <EditText
+            android:id="@+id/et_nuevo_correo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nuevo Correo"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp"
+            android:inputType="textEmailAddress" />
 
-    <!-- Campo para la nueva contraseña -->
-    <EditText
-        android:id="@+id/et_nueva_contraseña"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nueva Contraseña"
-        android:inputType="textPassword" />
-</LinearLayout>
+        <!-- Campo para la nueva contraseña -->
+        <EditText
+            android:id="@+id/et_nueva_contraseña"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nueva Contraseña"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btn_guardar_cambios"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Guardar Cambios"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btn_eliminar_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Eliminar Usuario"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,14 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:background="@drawable/fpawsy"
+    android:padding="16dp">
 
+    <!-- Logo de Pawsy -->
+    <ImageView
+        android:id="@+id/logo_pawsy"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/logopawsyf"
+        android:contentDescription="Logo de Pawsy" />
+
+    <!-- Título de Bienvenida -->
     <TextView
+        android:id="@+id/tv_bienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Página Principal"
-        android:textSize="20sp" />
-</LinearLayout>
+        android:layout_below="@id/logo_pawsy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="¡Bienvenido a Pawsy!"
+        android:textColor="#5b2c6f"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tv_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_bienvenida"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Tu Mini Guía de Adopción para Mascotas"
+        android:textColor="#5b2c6f"
+        android:textSize="18sp" />
+
+    <!-- Texto de navegación -->
+    <TextView
+        android:id="@+id/tv_instrucciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_subtitulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Navega por el menú para conocer nuestra página"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp" />
+
+</RelativeLayout>

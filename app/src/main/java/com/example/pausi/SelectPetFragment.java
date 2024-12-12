@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,8 +26,14 @@ public class SelectPetFragment extends Fragment {
         btnIrATips = view.findViewById(R.id.btn_ir_a_tips);
 
         btnIrATips.setOnClickListener(v -> {
-            RadioButton selectedPet = view.findViewById(rgMascotas.getCheckedRadioButtonId());
-            String petType = selectedPet != null ? selectedPet.getText().toString() : "General";
+            int selectedId = rgMascotas.getCheckedRadioButtonId();
+            if (selectedId == -1) {
+                Toast.makeText(getContext(), "Por favor selecciona una mascota", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            RadioButton selectedPet = view.findViewById(selectedId);
+            String petType = selectedPet.getText().toString();
 
             TipsFragment tipsFragment = new TipsFragment();
             Bundle args = new Bundle();

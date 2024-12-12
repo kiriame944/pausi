@@ -4,4 +4,20 @@
     <string name="drawer_close">Cerrar Menú</string>
     <string name="welcome_message">Bienvenido a Pausi</string>
     <string name="select_pet_instruction">Selecciona una mascota para obtener consejos</string>
+    <string name="consejos_generales">Consejos generales para adoptar una mascota:\n- Asegúrate de tener el espacio y los recursos necesarios.\n- Investiga sobre la especie y sus necesidades.\n- Realiza visitas periódicas al veterinario.</string>
+
+    <string name="consejos_perro">Consejos para adoptar un perro:\n- Necesitan ejercicio diario.\n- Brinda un espacio adecuado y seguro.\n- Alimentación equilibrada según su tamaño y edad.\n- Entrenamiento y socialización son esenciales.</string>
+
+    <string name="consejos_gato">Consejos para adoptar un gato:\n- Proporciona un ambiente tranquilo y limpio.\n- Necesitan rascadores y juguetes interactivos.\n- Asegúrate de tener una dieta adecuada para gatos.</string>
+
+    <string name="consejos_ave">Consejos para adoptar un ave:\n- Jaula espaciosa con perchas y juguetes.\n- Alimentación rica en semillas y frutas.\n- Mantén el ambiente libre de corrientes de aire.</string>
+
+    <string name="consejos_conejo">Consejos para adoptar un conejo:\n- Necesitan un espacio amplio para moverse.\n- Alimentación basada en heno y vegetales frescos.\n- Visitas regulares al veterinario especializado.</string>
+
+    <string name="consejos_tortuga">Consejos para adoptar una tortuga:\n- Necesitan un hábitat acuático/terrestre.\n- Alimentación rica en calcio y vitaminas.\n- Proporciona iluminación UVB y control de temperatura.</string>
+
+    <string name="consejos_cuyo">Consejos para adoptar un cuyo:\n- Son animales sociales, considera tener al menos dos.\n- Dieta rica en fibra y vitamina C.\n- Necesitan un espacio limpio y bien ventilado.</string>
+
+    <string name="consejos_hamster">Consejos para adoptar un hámster:\n- Son nocturnos y requieren actividad por la noche.\n- Jaula con juguetes como ruedas y túneles.\n- Alimentación variada con semillas y proteínas.</string>
+
 </resources>

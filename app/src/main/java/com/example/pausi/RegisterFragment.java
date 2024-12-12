@@ -22,7 +22,7 @@ public class RegisterFragment extends Fragment {
 
         EditText etNombre = view.findViewById(R.id.et_nombre);
         EditText etCorreo = view.findViewById(R.id.et_correo);
-        EditText etContraseña = view.findViewById(R.id.et_contraseña);
+        EditText etContraseña = view.findViewById(R.id.et_contrasena);
         Button btnRegistrar = view.findViewById(R.id.btn_registrar);
 
         btnRegistrar.setOnClickListener(v -> {

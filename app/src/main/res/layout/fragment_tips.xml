@@ -1,15 +1,45 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/dosfpawsy"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/tv_consejos"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Consejos de adopción aparecerán aquí."
-        android:textSize="16sp"
-        android:padding="16dp" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consejos para la Adopción"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Texto de Consejos -->
+        <TextView
+            android:id="@+id/tv_consejos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:lineSpacingExtra="8dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/black"
+            android:text="Consejos de adopción aparecerán aquí."
+            android:layout_marginBottom="24dp" />
+
+        <!-- Imagen Decorativa -->
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:contentDescription="Imagen decorativa para consejos" />
+    </LinearLayout>
+</ScrollView>

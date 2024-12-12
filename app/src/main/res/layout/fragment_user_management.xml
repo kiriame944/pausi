@@ -1,43 +1,69 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
+    android:background="@drawable/dosfpawsy"
+    android:padding="16dp">
 
-    <!-- Mostrar información del usuario -->
-    <TextView
-        android:id="@+id/tv_usuario"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Información del Usuario"
-        android:textSize="18sp"
-        android:padding="8dp" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <!-- Botón para cargar usuario -->
-    <Button
-        android:id="@+id/btn_cargar_usuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cargar Usuario"
-        android:layout_marginTop="16dp" />
+        <!-- Título de la sección -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información del Usuario"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="24dp" />
 
-    <!-- Botón para editar usuario -->
-    <Button
-        android:id="@+id/btn_editar_usuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Editar Usuario"
-        android:layout_marginTop="16dp" />
+        <!-- Información del usuario -->
+        <TextView
+            android:id="@+id/tv_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aquí aparecerá la información del usuario"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            android:background="@drawable/edittext_background"
+            android:layout_marginBottom="24dp" />
 
-    <!-- Botón para eliminar usuario -->
-    <Button
-        android:id="@+id/btn_eliminar_usuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Eliminar Usuario"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:textColor="@android:color/white" />
-</LinearLayout>
+        <!-- Botón para cargar usuario -->
+        <Button
+            android:id="@+id/btn_cargar_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Cargar Usuario"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón para editar usuario -->
+        <Button
+            android:id="@+id/btn_editar_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Editar Usuario"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón para eliminar usuario -->
+        <Button
+            android:id="@+id/btn_eliminar_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Eliminar Usuario"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#fadbd8"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+</ScrollView>

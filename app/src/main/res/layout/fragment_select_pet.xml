@@ -1,38 +1,106 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/dosfpawsy"
     android:padding="16dp">
 
-    <RadioGroup
-        android:id="@+id/rg_mascotas"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/rb_perro"
+        <!-- Título -->
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perro" />
+            android:text="Selecciona tu mascota ideal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
 
-        <RadioButton
-            android:id="@+id/rb_gato"
-            android:layout_width="wrap_content"
+        <!-- Grupo de RadioButtons -->
+        <RadioGroup
+            android:id="@+id/rg_mascotas"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gato" />
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/rb_ave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ave" />
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/rb_perro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Perro"
+                android:drawablePadding="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
 
-    <Button
-        android:id="@+id/btn_ir_a_tips"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ver Consejos" />
-</LinearLayout>
+            <RadioButton
+                android:id="@+id/rb_gato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gato"
+                android:drawablePadding="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rb_ave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ave"
+                android:drawablePadding="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rb_conejo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conejo"
+                android:drawablePadding="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rb_tortuga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tortuga"
+                android:drawablePadding="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rb_cuyo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cuyo"
+                android:drawablePadding="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rb_hamster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hamster"
+                android:drawablePadding="12dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+        <!-- Botón para ver consejos -->
+        <Button
+            android:id="@+id/btn_ir_a_tips"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Ver Consejos"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>

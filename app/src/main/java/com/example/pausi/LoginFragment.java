@@ -21,7 +21,7 @@ public class LoginFragment extends Fragment {
         databaseHelper = new DatabaseHelper(getContext());
 
         EditText etCorreo = view.findViewById(R.id.et_correo);
-        EditText etContraseña = view.findViewById(R.id.et_contraseña);
+        EditText etContraseña = view.findViewById(R.id.et_contrasena);
         Button btnIniciarSesion = view.findViewById(R.id.btn_iniciar_sesion);
 
         btnIniciarSesion.setOnClickListener(v -> {
